@@ -1,0 +1,18 @@
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8" />
+		<script src="node_modules/angular/angular.js"></script>
+		<script src="app.js"></script>
+		<title>Document</title>
+	</head>
+	<body ng-controller="MainController">
+		<input type="text" ng-model="newTask"/>
+		<button ng-click="addToList()">Add</button>
+		Your to do list!
+		<ul>
+			<li ng-repeat="task in toDoList track by $index">
+			{{task}}
+			</li>
+		</ul>
+	</body>
+</html>
